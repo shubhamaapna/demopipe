@@ -16,4 +16,4 @@ jobs:
         TARGET_REPO: sanjayaapna/demopipe
         TARGET_BRANCH: develop
         BUILD_SCRIPT: yarn && yarn build
-        BUILD_DIR: blog/.vuepress/dist/
+        BUILD_DIR: src/.vuepress/dist/
