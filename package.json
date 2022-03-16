@@ -10,7 +10,7 @@
   "repository": "/vue-press-demo",
   "scripts": {
     "dev": "vuepress dev src",
-    "docs:build": "vuepress build docs"
+    "build": "vuepress build src"
   },
   "license": "MIT",
   "devDependencies": {
