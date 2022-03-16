@@ -12,7 +12,7 @@ jobs:
     
     - name: auth-check
       run: |
-        git clone sanjayaapna/demopipe
+        git clone https://github.com/sanjayaapna/demopipe.git
         Username: sanjayaapna
         Password: ${{ secrets.ACCESS_TOKEN }}
             
