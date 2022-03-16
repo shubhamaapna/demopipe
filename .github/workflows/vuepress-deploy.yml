@@ -9,10 +9,6 @@ jobs:
       
     - name: Debug
       run: ls
-    
-    - name: auth-check
-      run: |
-        curl -u sanjayaapna:${{ secrets.ACCESS_TOKEN }} https://github.com/sanjayaapna/demopipe.git            
       
     - name: vuepress-deploy
       uses: jenkey2011/vuepress-deploy@master
@@ -24,4 +20,4 @@ jobs:
          TARGET_REPO: sanjayaapna/demopipe
          TARGET_BRANCH: develop
          BUILD_SCRIPT: yarn && yarn build
-         BUILD_DIR: src/.vuepress/dist/
+         #BUILD_DIR: src/.vuepress/dist/
