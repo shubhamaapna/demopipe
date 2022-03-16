@@ -25,7 +25,8 @@ jobs:
         git branch --list
         git add -A
         git commit -m 'deploy to gh-pages branch'
-        git remote add origin https://github.com/shubhamaapna/nodejs.git
-        git push -u origin
+        git remote add origin https://github.com/shubhamaapna/demopipe.git
+        git push -f https://github.com/shubhamaapna/demopipe.git master:gh-pages
+        cd -
 
 
