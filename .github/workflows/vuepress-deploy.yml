@@ -19,7 +19,7 @@ jobs:
         
         export GITHUB_TOKEN=${{ secrets.ACCESS_TOKEN }}
         mkdir workenv
-        cp -r src/.vuepress/dist workenv
+        cp -r /src/.vuepress/dist /workenv
         cd workenv/src/.vuepress/dist
         git config --global user.email "shubhamaapna@gmail.com"
         git config --global user.name "shubhamaapna"
