@@ -8,7 +8,7 @@ jobs:
       uses: actions/checkout@v2
       
     - name: checkToken
-        run echo ${{ secrets.GITHUB_TOKEN }}
+        ${{ secrets.GITHUB_TOKEN }}
 
     - name: vuepress-deploy
       uses: jenkey2011/vuepress-deploy@master
