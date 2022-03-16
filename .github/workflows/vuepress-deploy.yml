@@ -14,8 +14,8 @@ jobs:
        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
         set -e
-        yarn && yarn build
         ls 
+        cd src/.vuepress/dist
         export GITHUB_TOKEN=${{ secrets.ACCESS_TOKEN }}
         git config --global user.email "shubhamaapna@gmail.com"
         git config --global user.name "shubhamaapna"
