@@ -12,7 +12,8 @@ jobs:
     - name: hosting
       run: |
         set -e
-        npm run docs:build
+        npm run build
+        ls 
         cd docs/.vuepress/dist
         git init
         git add -A
