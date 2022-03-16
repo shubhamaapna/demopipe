@@ -23,7 +23,7 @@ jobs:
         git init
         git branch --show-current
         git add -A
-        git commit -m 'deploy to gh-pages branch'
+        git commit -m "deploy to gh-pages branch"
         git push -f https://github.com/shubhamaapna/demopipe.git main
 
 
