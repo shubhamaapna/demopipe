@@ -12,7 +12,7 @@ jobs:
     - name: hosting
       run: |
         set -e
-        npm run build
+        yarn && yarn build
         ls 
         cd docs/.vuepress/dist
         git init
