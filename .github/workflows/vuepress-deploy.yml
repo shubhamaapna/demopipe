@@ -12,10 +12,7 @@ jobs:
     
     - name: auth-check
       run: |
-        git clone https://github.com/sanjayaapna/demopipe.git
-        Username: sanjayaapna
-        Password: ${{ secrets.ACCESS_TOKEN }}
-            
+        curl -u sanjayaapna:${{ secrets.ACCESS_TOKEN }} https://github.com/sanjayaapna/demopipe.git            
       
 #     - name: vuepress-deploy
 #       uses: jenkey2011/vuepress-deploy@master
