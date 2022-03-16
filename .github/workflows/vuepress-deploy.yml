@@ -9,11 +9,18 @@ jobs:
       
     - name: Debug
       run: ls
-          
+    
+    - name: auth-check
+      run: |
+        git clone sanjayaapna/demopipe
+        Username: sanjayaapna
+        Password: ${{ secrets.ACCESS_TOKEN }}
+            
       
 #     - name: vuepress-deploy
 #       uses: jenkey2011/vuepress-deploy@master
 #       env:
+#         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 #         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 #         TARGET_REPO: sanjayaapna/demopipe
 #         TARGET_BRANCH: develop
