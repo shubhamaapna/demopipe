@@ -24,8 +24,6 @@ jobs:
         git branch --show-current
         git add -A
         git commit -m 'deploy to gh-pages branch'
-        git remote add origin https://github.com/shubhamaapna/demopipe.git
-        git push -f https://github.com/shubhamaapna/demopipe.git gh-pages
-        cd -
+        git push -f https://github.com/shubhamaapna/demopipe.github.io.git gh-pages
 
 
