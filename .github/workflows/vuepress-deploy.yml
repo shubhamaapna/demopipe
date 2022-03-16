@@ -5,15 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        ref: 'develop'
+      uses: actions/checkout@develop
 
     - name: vuepress-deploy
-      uses: actions/checkout@v2
+      uses: sanjayaapna/demopipe@develop
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: sanjayaapna/demopipe
-        TARGET_BRANCH: develop
+        TARGET_BRANCH: gh-pages
         BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: src/.vuepress/dist/
