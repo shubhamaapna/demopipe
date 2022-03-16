@@ -9,15 +9,13 @@ jobs:
       
     - name: Debug
       run: ls
-      
-    - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
-      with:
-        repo-token: ${{ secrets.ACCESS_TOKEN }}
-        
-      env:
-         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-         TARGET_REPO: sanjayaapna/demopipe
-         TARGET_BRANCH: gh-pages
-         BUILD_SCRIPT: yarn && yarn build
-         #BUILD_DIR: src/.vuepress/dist/
+    - name: hosting
+      run: |
+        set -e
+        npm run docs:build
+        cd docs/.vuepress/dist
+        git init
+        git add -A
+        git commit -m 'deploy'
+        git push -f git@github.com:shubhamaapna/demopipe.git master:gh-pages
+        cd -
